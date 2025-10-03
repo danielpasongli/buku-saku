@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Saku Data Strategis BPS</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo"><span>📈 BPS INDIKATOR</span></div>
+        <nav class="nav">
+            <a href="#" data-view="view-home">Home</a>
+            <a href="#" data-view="view-indikator">Indikator</a>
+            <a href="#" data-view="view-metadata">Metadata</a>
+            <a href="#" data-view="view-about">About</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="view-home" class="view-section">
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>Buku Saku Data Strategis BPS: Kota Pekalongan</h1>
+                    <p>Akses cepat data Indikator Kunci dan Metadatanya.</p>
+                    <a href="#" class="btn" data-view="view-indikator">LIHAT INDIKATOR TERKINI</a>
+                </div>
+                <div class="hero-visual">
+                    <div class="bar bar-small"></div><div class="bar bar-medium"></div><div class="bar bar-large"></div>
+                </div>
+            </section>
+        </section>
+
+        <section id="view-indikator" class="view-section hidden">
+            <h2 style="margin-bottom: 20px;">Dashboard Data Indikator Utama</h2>
+            
+            <section class="filter-controls">
+                <label for="filter-select">Filter Perubahan:</label>
+                <select id="filter-select">
+                    <option value="all">Tampilkan Semua</option>
+                    <option value="Positif">Perubahan Positif (Hijau)</option>
+                    <option value="Negatif">Perubahan Negatif (Merah)</option>
+                </select>
+            </section>
+    
+            <section id="data-section" class="data-grid">
+                <p>Memuat data...</p>
+            </section>
+        </section>
+
+        <section id="view-metadata" class="view-section hidden">
+            <h2 style="margin-bottom: 20px;">Detail Metadata Indikator BPS</h2>
+            
+            <section class="filter-controls">
+                <label for="metadata-select">Pilih Indikator Detail:</label>
+                <select id="metadata-select">
+                    <option value="">Pilih Indikator...</option> 
+                </select>
+            </section>
+
+            <div id="metadata-detail-card" class="card-detail-metadata">
+                <h3>Pilih Indikator</h3>
+                <p id="metadata-content">Silakan pilih indikator dari *dropdown* di atas untuk melihat detail.</p>
+            </div>
+        </section>
+
+        <section id="view-about" class="view-section hidden">
+            <h2 style="margin-bottom: 20px;">Tentang Aplikasi Buku Saku Digital</h2>
+            <div style="background-color: #fff; padding: 20px; border-radius: 8px;">
+                <p>Proyek ini adalah inisiatif untuk memfasilitasi akses cepat data-data strategis BPS.</p>
+                <p style="margin-top: 10px;">Semua data terhubung secara dinamis dengan Google Sheets, memastikan kemudahan pembaruan data.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Diolah dari data resmi *Badan Pusat Statistik (BPS)*.</p>
+        <p>Inisiatif oleh Peserta Magang Angkatan: 2025</p>
+    </footer>
+
+    <script src="app.js"></script> 
+</body> 
+</html>
